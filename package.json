@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "browserslist": ["> 1%", "last 2 versions"],
+  "scripts": {
+    "dev": "webpack-dev-server --colors --progress -d",
+    "build": "NODE_ENV=production webpack --display-optimization-bailout --display-error-details --config webpack.prod.config.ts",
+    "precommit": "lint-staged",
+    "format": "prettier-standard --trailing-comma all --no-semi '**/*.{json,js,jsx,ts,tsx,css,scss,sass,less}'"
+  },
+  "lint-staged": {
+    "**/*.{json,js,jsx,ts,tsx,css,scss,sass,less}": [
+      "prettier-standard",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/extract-text-webpack-plugin": "^2.1.0",
+    "@types/webpack": "^3.0.4",
+    "autoprefixer": "^7.1.2",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.2",
+    "postcss-loader": "^2.0.6",
+    "precss": "^2.0.0",
+    "prettier-standard": "^6.0.0",
+    "style-loader": "^0.18.2",
+    "ts-node": "^3.2.0",
+    "typescript": "^2.4.1",
+    "webpack": "^3.3.0",
+    "webpack-bundle-analyzer": "^2.8.3",
+    "webpack-dev-server": "^2.5.1",
+    "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.23.0"
+  }
+}
